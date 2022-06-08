@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class SortArray {
@@ -10,10 +11,7 @@ public class SortArray {
     }
 
     static int[] sort(int[] array){
-        int[] result = new int[array.length];
-        for (int i = 0; i < array.length; i++){
-            result[i] = array[i];
-        }
+        int[] result = Arrays.copyOf(array, array.length);
 
         boolean flag = true;
         int temp;
