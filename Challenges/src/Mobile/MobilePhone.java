@@ -10,9 +10,4 @@ public class MobilePhone {
         this.myNumber = myNumber;
         this.contacts = new ArrayList<Contact>();
     }
-
-    public boolean find(){
-
-        return contacts.indexOf();
-    }
 }
