@@ -1,5 +1,7 @@
 import OOP.Car;
 
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args){
         // HelloWorld module
@@ -14,6 +16,22 @@ public class Main {
         PrintMinMaxValue(Double.MIN_VALUE, Double.MAX_VALUE);
 
         printSquareStar(5);
+
+        ArrayList<Car> cars = new ArrayList<Car>();
+        Car t = new Car("Test1", "1");
+        cars.add(t);
+        cars.add(new Car("Test2", "2"));
+        cars.add(new Car("Test3", "3"));
+        cars.add(createCar("Test4", "4"));
+        cars.get(3).name = t.name;
+        cars.get(3).number = t.number;
+        System.out.println(cars.indexOf(t));
+        for(int i=0; i < cars.size();i++){
+            System.out.println((i+1) + ". " + cars.get(i).name + " -> " + cars.get(i).number);
+        }
+    }
+    public static Car createCar(String name, String number){
+        return new Car(name,number);
     }
 
     public static void printSquareStar(int number){
